@@ -12,6 +12,41 @@ print('obs:',ob_space)
 print('act:',ac_space)
 
 
+
+
+
+
+
+
+
+
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torchvision.models as models
+
+resnet = models.resnet50(pretrained=True)
+resnet.fc = nn.Linear(2048,3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 done = False
 while not done:
     env.render()
